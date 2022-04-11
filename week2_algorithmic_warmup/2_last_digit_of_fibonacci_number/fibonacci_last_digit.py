@@ -1,5 +1,5 @@
 # Uses python3
-import sys
+# import sys
 
 def get_fibonacci_last_digit_naive(n):
     if n <= 1:
@@ -13,7 +13,15 @@ def get_fibonacci_last_digit_naive(n):
 
     return current % 10
 
+def fib_fast(n):
+    a, b = 0, 1
+    for i in range(n % 60):
+        a, b = b, (a + b) % 10
+    return a    
+
 if __name__ == '__main__':
-    input = sys.stdin.read()
+    # input = sys.stdin.read()
+    input = input()
     n = int(input)
-    print(get_fibonacci_last_digit_naive(n))
+    print(fib_fast(n))
+    # print(get_fibonacci_last_digit_naive(n))
