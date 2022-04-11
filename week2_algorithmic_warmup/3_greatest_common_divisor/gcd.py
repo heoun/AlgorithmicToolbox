@@ -1,5 +1,5 @@
 # Uses python3
-import sys
+# import sys
 
 def gcd_naive(a, b):
     current_gcd = 1
@@ -34,8 +34,8 @@ def gcd_recursion(a,b):
     return gcd_recursion(b,a%b)
 
 if __name__ == "__main__":
-    input = sys.stdin.read()
-    # input = input()
+    # input = sys.stdin.read()
+    input = input()
     a, b = map(int, input.split())
     # print(gcd_naive(a, b))
     # print(gcd_fast(a,b))

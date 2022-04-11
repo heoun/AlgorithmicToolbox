@@ -1,5 +1,5 @@
 # Uses python3
-import sys
+#import sys
 
 def lcm_naive(a, b):
     for l in range(1, a*b + 1):
@@ -8,8 +8,15 @@ def lcm_naive(a, b):
 
     return a*b
 
+def gcd_recursion(a,b):
+    if(b==0):
+        return a
+    # elif(b==a):
+    #     return a
+    return gcd_recursion(b,a%b)
+
 if __name__ == '__main__':
-    input = sys.stdin.read()
+    input = input() #sys.stdin.read()
     a, b = map(int, input.split())
-    print(lcm_naive(a, b))
+    print(int((a*b)/gcd_recursion(a,b)))
 
